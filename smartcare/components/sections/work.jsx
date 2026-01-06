@@ -8,24 +8,24 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Work() {
   return (
-    <section id="work" className="py-24 relative">
+    <section id="work" className="py-12 md:py-16 lg:py-24 relative">
       {/* Background blob */}
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-secondary/30 blur-[100px] rounded-full -z-10 pointer-events-none" />
 
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 mb-8 md:mb-12 px-4">
           <div>
             <Badge variant="outline" className="mb-4 rounded-full px-4 py-1 border-primary/30 text-primary bg-primary/5">
               Recent Projects
             </Badge>
-            <h2 className="text-4xl font-bold tracking-tight">Real Results</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">Real Results</h2>
           </div>
-          <p className="max-w-md text-muted-foreground">
+          <p className="max-w-md text-sm sm:text-base text-muted-foreground">
             See how we bring appliances back to life with expert repairs.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-4 sm:gap-6 md:gap-8 md:grid-cols-2">
           {projects.map((p, idx) => (
             <motion.div
               key={p.title}

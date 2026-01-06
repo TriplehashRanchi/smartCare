@@ -35,15 +35,15 @@ export default function Contact() {
 
   return (
     <section id="contact" className="bg-muted/20">
-      <div className="mx-auto max-w-6xl px-4 py-16">
+      <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
         <Badge variant="secondary" className="rounded-xl">Contact</Badge>
-        <h2 className="mt-3 text-3xl font-bold tracking-tight">Book a service</h2>
-        <p className="mt-2 text-muted-foreground">
+        <h2 className="mt-3 text-2xl sm:text-3xl font-bold tracking-tight">Book a service</h2>
+        <p className="mt-2 text-sm sm:text-base text-muted-foreground">
           Share your issue and location. For urgent work, call/WhatsApp.
         </p>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
-          <Card className="rounded-3xl p-6">
+        <div className="mt-6 md:mt-8 grid gap-4 md:grid-cols-2">
+          <Card className="rounded-2xl sm:rounded-3xl p-5 sm:p-6">
             <form onSubmit={onSubmit} className="grid gap-3">
               <Input
                 placeholder="Your Name"
@@ -70,13 +70,12 @@ export default function Contact() {
 
               {status.text ? (
                 <div
-                  className={`text-sm ${
-                    status.type === "success"
+                  className={`text-sm ${status.type === "success"
                       ? "text-green-600"
                       : status.type === "error"
-                      ? "text-red-600"
-                      : "text-muted-foreground"
-                  }`}
+                        ? "text-red-600"
+                        : "text-muted-foreground"
+                    }`}
                 >
                   {status.text}
                 </div>
@@ -84,7 +83,7 @@ export default function Contact() {
             </form>
           </Card>
 
-          <Card className="rounded-3xl p-6">
+          <Card className="rounded-2xl sm:rounded-3xl p-5 sm:p-6">
             <div className="text-lg font-semibold">Direct Contact</div>
             <div className="mt-4 grid gap-2 text-sm text-muted-foreground">
               <div><b>Phone:</b> <a className="underline" href={`tel:${business.phone}`}>{business.phone}</a></div>
@@ -108,7 +107,7 @@ export default function Contact() {
             </div>
 
             <div className="mt-6 rounded-2xl border bg-background p-4 text-sm text-muted-foreground">
-              Tip: Add your service area, working hours, and Google Map link here.
+              Tip: Add your service area, working hour, and Google Map link here.
             </div>
           </Card>
         </div>

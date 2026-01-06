@@ -177,6 +177,27 @@ body {
   overflow-x: hidden;
 }
 
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Safe area for mobile devices with notches */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
 .bg-grid {
   background-size: 40px 40px;
   background-image: linear-gradient(to right, oklch(0.5 0.1 240 / 0.05) 1px, transparent 1px),

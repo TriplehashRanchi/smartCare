@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Testimonials() {
   return (
-    <section className="relative overflow-hidden py-24 bg-gray-50/50">
+    <section className="relative overflow-hidden py-12 md:py-16 lg:py-24 bg-gray-50/50">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none">
         <div className="absolute top-20 right-0 h-64 w-64 rounded-full bg-primary/5 blur-3xl" />
@@ -17,17 +17,17 @@ export default function Testimonials() {
 
       <div className="container relative z-10 mx-auto max-w-6xl px-4">
         {/* Section Header */}
-        <div className="mb-20 flex flex-col items-center text-center">
+        <div className="mb-12 md:mb-16 lg:mb-20 flex flex-col items-center text-center px-4">
           <Badge variant="secondary" className="mb-4 rounded-full px-4 py-1 font-medium uppercase tracking-wider text-primary">
             Client Stories
           </Badge>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
             Trusted by your <span className="text-primary">Neighbors</span>
           </h2>
         </div>
 
         {/* Responsive Layout: Carousel on Mobile, Grid on Desktop */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-12 -mx-4 px-4 hide-scrollbar pt-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible md:pb-0 md:mx-0 md:px-0">
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 sm:gap-6 pb-12 -mx-4 px-4 hide-scrollbar pt-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible md:pb-0 md:mx-0 md:px-0">
           {testimonials.map((t, idx) => (
             <motion.div
               key={t.name}
@@ -35,7 +35,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.15 }}
-              className="group relative min-w-[85%] snap-center md:min-w-0"
+              className="group relative min-w-[280px] sm:min-w-[85%] snap-center md:min-w-0"
             >
               {/* 1. The Orange/Yellow Outline Stroke Effect */}
               <div className="absolute inset-0 -translate-x-2 -translate-y-2 rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-[1rem] rounded-bl-[1rem] border border-orange-400/50 opacity-60 transition-transform duration-300 group-hover:-translate-x-3 group-hover:-translate-y-3" />

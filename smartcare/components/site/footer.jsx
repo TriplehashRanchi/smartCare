@@ -5,17 +5,17 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t mt-20 overflow-hidden">
+    <footer className="relative border-t mt-12 md:mt-16 lg:mt-20 overflow-hidden">
       {/* Footer Gradient Background */}
       <div className="absolute inset-0 bg-secondary/30 -z-20" />
       <div className="absolute bottom-0 left-0 w-full h-[500px] bg-gradient-to-t from-primary/10 to-transparent -z-10 pointer-events-none" />
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="grid gap-8 sm:gap-10 md:gap-12 sm:grid-cols-2 lg:grid-cols-4">
 
           {/* Brand Column */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2 font-bold text-xl tracking-tight">
+            <Link href="/" className="flex items-center gap-2 font-bold text-lg sm:text-xl tracking-tight">
               <span className="bg-primary text-primary-foreground rounded-full p-1.5">
                 <Sparkles className="h-5 w-5" />
               </span>
@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Company</h3>
+            <h3 className="font-semibold text-base sm:text-lg mb-4">Company</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               {navLinks.map((l) => (
                 <li key={l.href}>
@@ -50,7 +50,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Services</h3>
+            <h3 className="font-semibold text-base sm:text-lg mb-4">Services</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li><a href="#" className="hover:text-primary transition-colors">AC Repair</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Refrigerator Fix</a></li>
@@ -61,7 +61,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
+            <h3 className="font-semibold text-base sm:text-lg mb-4">Contact Us</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-3">
                 <span className="font-medium text-foreground">Phone:</span>
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <Separator className="my-10 bg-border/50" />
+        <Separator className="my-8 md:my-10 bg-border/50" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground/60">
           <div>

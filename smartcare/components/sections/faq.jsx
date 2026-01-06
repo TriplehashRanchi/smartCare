@@ -25,7 +25,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="relative w-full bg-gradient-to-b from-transparent to-muted/20 px-4 py-20 md:px-8">
+    <section className="relative w-full bg-gradient-to-b from-transparent to-muted/20 px-4 py-12 md:py-16 lg:py-20 md:px-8">
       {/* Inject SEO Schema */}
       <script
         type="application/ld+json"
@@ -34,18 +34,18 @@ export default function FAQ() {
 
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
-          
+
           {/* LEFT COLUMN: Header & Contact CTA (Sticky on Desktop) */}
           <div className="lg:col-span-4">
-            <div className="sticky top-10 flex flex-col gap-6">
+            <div className="lg:sticky lg:top-10 flex flex-col gap-6">
               <div>
                 <Badge variant="outline" className="mb-4 rounded-full border-primary/20 bg-primary/5 px-4 py-1 text-primary">
                   <HelpCircle className="mr-2 h-3.5 w-3.5" /> FAQ
                 </Badge>
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-foreground">
                   Frequently Asked <br className="hidden lg:block" /> Questions
                 </h2>
-                <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
+                <p className="mt-4 text-muted-foreground text-base sm:text-lg leading-relaxed">
                   Everything you need to know about our repair services, billing, and warranty.
                 </p>
               </div>
@@ -56,7 +56,7 @@ export default function FAQ() {
                 <p className="mt-2 text-sm text-muted-foreground">
                   We are here to help. Chat with our team directly.
                 </p>
-                <div className="mt-4 flex flex-col gap-3 sm:flex-row lg:flex-col">
+                <div className="mt-4 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
                   <Button className="w-full gap-2" variant="default">
                     <Phone className="h-4 w-4" /> Call Now
                   </Button>
@@ -87,7 +87,7 @@ export default function FAQ() {
               ))}
             </Accordion>
           </div>
-          
+
         </div>
       </div>
     </section>

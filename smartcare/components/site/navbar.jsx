@@ -108,8 +108,8 @@ export default function Navbar() {
       </motion.header>
 
       {/* Mobile Top Header (Standard App Bar) */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-40 glass border-b px-5 py-4 flex items-center justify-between transition-all duration-300">
-        <Link href="/" className="flex items-center gap-2 font-bold text-lg tracking-tight">
+      <div className="md:hidden fixed top-0 left-0 right-0 z-40 glass border-b px-4 py-3 flex items-center justify-between transition-all duration-300">
+        <Link href="/" className="flex items-center gap-2 font-bold text-base sm:text-lg tracking-tight">
           <span className="bg-primary text-primary-foreground rounded-full p-1.5 shadow-[0_0_12px_var(--primary)] text-xs">
             <Sparkles className="h-4 w-4" />
           </span>
@@ -117,12 +117,47 @@ export default function Navbar() {
             {business.name}
           </span>
         </Link>
-        <Button asChild size="sm" className="rounded-full h-8 px-4 text-xs font-semibold shadow-lg shadow-primary/20">
+        <Button asChild size="sm" className="rounded-full h-9 px-3 sm:px-4 text-xs font-semibold shadow-lg shadow-primary/20">
           <a href={`tel:${business.phone}`}>
-            <Phone className="mr-2 h-3.5 w-3.5" /> Call Now
+            <Phone className="h-3.5 w-3.5 sm:mr-2" />
+            <span className="hidden sm:inline">Call Now</span>
           </a>
         </Button>
       </div>
+
+      {/* Mobile Bottom Navigation Bar */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 glass border-t pb-safe">
+        <div className="grid grid-cols-4 gap-1 px-2 py-2">
+          {links.map((l) => {
+            const Icon = icons[l.href] || icons.default;
+            const isActive = active === l.href;
+            
+            return (
+              <button
+                key={l.href}
+                onClick={() => scrollToHash(l.href)}
+                className={`relative flex flex-col items-center justify-center gap-1 py-2 px-1 rounded-xl transition-all duration-300 active:scale-95 ${
+                  isActive 
+                    ? "bg-primary/10 text-primary" 
+                    : "text-muted-foreground active:bg-muted/50"
+                }`}
+              >
+                {isActive && (
+                  <motion.div
+                    layoutId="mobile-active"
+                    className="absolute inset-0 bg-primary/10 rounded-xl"
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  />
+                )}
+                <Icon className={`h-5 w-5 relative z-10 ${isActive ? "text-primary" : ""}`} />
+                <span className={`text-[10px] font-medium relative z-10 ${isActive ? "text-primary" : ""}`}>
+                  {l.label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </nav>
     </>
   );
 }

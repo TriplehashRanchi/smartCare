@@ -31,7 +31,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden pt-20 pb-20 md:pt-32 md:pb-20">
+    <section id="home" className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden pt-24 pb-20 md:pt-32 md:pb-20">
 
       {/* GLOBAL Background Effects (Subtle grid) */}
       <div className="absolute inset-0 -z-20 bg-background" />
@@ -143,7 +143,7 @@ export default function Hero() {
                 {orbitingItems.map((item, index) => {
                   const angle = (index / orbitingItems.length) * 360;
                   // Responsive orbit radius: smaller on mobile, larger on desktop
-                  const orbitRadius = "clamp(100px, 20vw, 220px)";
+                  const orbitRadius = "clamp(80px, 18vw, 220px)";
 
                   return (
                     <div

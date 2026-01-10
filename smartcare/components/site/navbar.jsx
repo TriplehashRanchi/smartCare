@@ -62,8 +62,7 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden md:block transition-all duration-300 ${scrolled ? "w-[90%] max-w-4xl" : "w-[95%] max-w-6xl"
-          }`}
+        className="fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden md:block w-[95%] max-w-6xl"
       >
         <div className="glass rounded-full px-6 py-3 flex items-center justify-between shadow-lg">
           <Link href="/" className="flex items-center gap-2 font-bold text-lg tracking-tight">

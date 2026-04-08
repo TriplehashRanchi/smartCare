@@ -8,7 +8,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Work() {
   return (
-    <section id="work" className="py-12 md:py-16 lg:py-24 relative">
+    <section id="work" className="pt-24 pb-12 md:pt-32 md:pb-16 lg:pb-24 relative">
       {/* Background blob */}
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-secondary/30 blur-[100px] rounded-full -z-10 pointer-events-none" />
 

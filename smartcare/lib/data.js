@@ -1,19 +1,20 @@
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "My Work", href: "#work" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "My Work", href: "/work" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const business = {
   name: "SmartCare Services",
   tagline: "Fast • Affordable • Professional AC & Refrigerator Repair",
-  phone: "+91 90000 00000",
-  whatsapp: "+91 90000 00000",
-  email: "smartcare@example.com",
-  city: "Your City",
+  phone: "+91 92883 66528",
+  whatsapp: "+91 92883 66528",
+  email: "smartcarekqr@gmail.com",
+  city: "Hanuman Market, Jhumri Telaiya, District Koderma, Jharkhand",
   experience: "8+",
+  founderName: "Mukesh Kumar",
 };
 
 export const services = [

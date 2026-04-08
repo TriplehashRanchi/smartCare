@@ -190,9 +190,11 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* Improve touch targets on mobile */
+/* Improve touch targets on mobile without forcing all text links to overflow */
 @media (max-width: 768px) {
-  button, a {
+  button,
+  [role="button"],
+  .touch-target {
     min-height: 44px;
     min-width: 44px;
   }

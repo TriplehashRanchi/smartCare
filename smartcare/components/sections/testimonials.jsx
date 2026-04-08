@@ -26,8 +26,7 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        {/* Responsive Layout: Carousel on Mobile, Grid on Desktop */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 sm:gap-6 pb-12 -mx-4 px-4 hide-scrollbar pt-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible md:pb-0 md:mx-0 md:px-0">
+        <div className="grid grid-cols-1 gap-5 pt-8 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t, idx) => (
             <motion.div
               key={t.name}
@@ -35,7 +34,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.15 }}
-              className="group relative min-w-[280px] sm:min-w-[85%] snap-center md:min-w-0"
+              className="group relative"
             >
               {/* 1. The Orange/Yellow Outline Stroke Effect */}
               <div className="absolute inset-0 -translate-x-2 -translate-y-2 rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-[1rem] rounded-bl-[1rem] border border-orange-400/50 opacity-60 transition-transform duration-300 group-hover:-translate-x-3 group-hover:-translate-y-3" />
@@ -68,7 +67,7 @@ export default function Testimonials() {
 
                   {/* Review Text */}
                   <p className="mb-6 flex-grow text-sm leading-relaxed text-muted-foreground italic">
-                    "{t.text}"
+                    &ldquo;{t.text}&rdquo;
                   </p>
 
                   {/* Stars & CTA */}

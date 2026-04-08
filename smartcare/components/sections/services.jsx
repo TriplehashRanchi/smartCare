@@ -15,7 +15,7 @@ const icons = {
 
 export default function Services() {
   return (
-    <section id="services" className="py-12 md:py-16 lg:py-24 relative overflow-hidden">
+    <section id="services" className="pt-24 pb-12 md:pt-32 md:pb-16 lg:pb-24 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12 px-4">
           <Badge variant="outline" className="mb-4 rounded-full px-4 py-1 border-primary/30 text-primary bg-primary/5">
